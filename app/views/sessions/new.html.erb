@@ -1,0 +1,14 @@
+<div class="eight columns offset-by-two">
+
+	<h2>Log in</h2>
+
+	<%= simple_form_for :session, url: session_path do |f| %> <!-- usually knows where to go -->
+
+		<%= f.input :username %>
+		<%= f.input :password %>
+
+		<%= f.button :submit, "Log in" %>
+
+	<% end %>
+
+</div>

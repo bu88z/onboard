@@ -8,7 +8,9 @@ Onboard::Application.routes.draw do
 resources :users
 resources :jobs
 
-
+# because i don't want to login twice as a user
+# lets use a singular resource
+resource :session
 
 root "jobs#index"
 

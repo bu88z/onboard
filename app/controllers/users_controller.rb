@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   		#tell the browser, that i am this user. Name user_id created by us
 
-  		session[:user_id] = user.id
+  		session[:user_id] = @user.id
 
   		redirect_to root_path
   	else

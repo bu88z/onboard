@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
   def current_user
 
   	if session[:user_id].present?
-  		User.find(session[:user_id])  		
+  		User.find(session[:user_id])
   	end
-
+  	
   end
 
   # so we want to make this available to the views as well as the controllers
