@@ -56,3 +56,8 @@ gem "geocoder"
 # add active admin as a CMS
 gem "activeadmin", github: "gregbell/active_admin"
 
+# lets add in omniauth
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem "omniauth-linkedin"

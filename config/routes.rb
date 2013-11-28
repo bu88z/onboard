@@ -1,9 +1,11 @@
 Onboard::Application.routes.draw do
+
+# to fit in with omniauth's callsback urls
+get "/auth/:provider/callback" => "social_logins#create"
+# :provider changes
+
   
-  get "jobs/index"
-  get "jobs/show"
-  get "jobs/new"
-  get "jobs/edit"
+
 #this is where our URLs of our webapp are set
 resources :users
 resources :jobs
