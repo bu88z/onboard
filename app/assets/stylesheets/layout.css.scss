@@ -1,0 +1,476 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:500,600,700);
+
+// Vars
+$primaryColor: #0597FB;
+$secondaryColour: #00E5B3;
+$bgColour: #FDF6E9;
+
+body {
+  background: $bgColour;
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $primaryColor;
+  padding: 10px 0;
+}
+
+a {
+  color: $primaryColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0365a8;
+}
+
+.mid {
+  text-align: center;
+}
+
+h1 {
+  line-height: 75px;
+  float: left;
+  img {
+    vertical-align: middle;
+  }
+}
+img {
+  border-radius: 5px;
+  }
+
+h2 {
+  display: inline-block;
+  border-top: 4px solid $secondaryColour;
+  border-bottom: 4px solid $secondaryColour;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 4px 32px;
+  float: right;
+}
+
+aside h3 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+
+}
+
+header {
+  height: 75px;
+  line-height: 75px;
+  vertical-align: middle;
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  margin: 20px 0;
+  padding: 0 20px;
+  font-size: 18px;
+  border-left: 4px solid $secondaryColour;
+}
+
+nav a:first-child {
+  border-left: none;
+}
+
+nav a:last-child {
+  padding-right: 0;
+}
+
+.bordered {
+  border: 4px solid $secondaryColour;
+  padding: 20px;
+}
+
+aside ul li {
+  // text-align: right;
+}
+
+aside .selected {
+  color: $secondaryColour;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0;
+}
+
+div#upload_wrap{
+  display: none;
+}
+
+
+form {
+  clear: both;
+}
+
+form div.input, form div.form-row {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: inline-block;
+  float: left;
+  width: 35%;
+  border: 4px solid $secondaryColour;
+  font-size: 18px;
+  padding: 4px 8px;
+  vertical-align: top;
+}
+
+
+
+a.upload_override,
+input[value="submit"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea {
+  background: transparent;
+  background-image: none;
+  border: 4px solid $secondaryColour;
+  border-left: none;
+  outline: none;
+  width: 65%;
+  padding: 4px 8px;
+  font-size: 18px;
+  vertical-align: top;
+  color: $primaryColor;
+  margin-top: 0;
+  background-color: white;
+}
+
+input[value="submit"] {
+  border: 4px solid $secondaryColour;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a.upload_override {
+  display: block;
+  float: right;
+  background: url(/assets/search.png) no-repeat 96% center white;
+
+}
+
+form div.form-row {
+  clear: both;
+
+  label {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+  span {
+    display: inline-block;
+    float: left;
+    width: 35%;
+    border: 4px solid $secondaryColour;
+    font-size: 18px;
+    padding: 4px 8px;
+    vertical-align: top;
+
+  }
+
+  &:nth-child(5) {
+
+    label:first-child {
+      width: 66.666%;
+
+      span {
+        width: 52.5%;
+      }
+
+      input {
+        width: 47.5%;
+        border-left: none;
+      }
+    }
+
+    input {
+      width: 28.3333%;
+      clear: none;
+      float: left;
+    }
+
+    span:nth-child(2) {
+      width: 5%;
+      float: left;
+      text-align: center;
+      clear: none;
+      border: 4px solid transparent;
+      border-left: none;
+      border-right: none;
+    }
+
+    input:last-child {
+      border: 4px solid $secondaryColour;
+    }
+  }
+
+}
+
+form div.form-row:before,
+form div.form-row:after,
+form div.input:before,
+form div.input:after  {
+    content: "";
+    display: table;
+}
+form div.form-row:after,
+form div.input:after {
+    clear: both;
+}
+form div.form-row,
+form div.input {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+button p,
+input[type="submit"] {
+  background: transparent;
+  background-image: none;
+  border: 4px solid $secondaryColour;
+  color: $primaryColor;
+  padding: 4px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+  clear: both;
+  outline: none;
+  margin: 0;
+  
+  &:hover {
+    background: $secondaryColour;
+    color: white;
+  }
+}
+
+button p {
+  vertical-align: center;
+}
+
+input.location_search {
+  width: 100%;
+  background: url(/assets/search.png) no-repeat 96% center;
+  border: 4px solid $secondaryColour;
+}
+
+
+abbr {
+  float: right;
+}
+
+span.error {
+  display: inline-block;
+  padding: 5px 12px;
+  color: #E55D2E;
+}
+
+::-webkit-input-placeholder {
+  color: $primaryColor;
+}
+
+.flash {
+  background: $secondaryColour;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.flash.error {
+  background: #E55D2E;
+}
+
+.map {
+  height: 300px;
+  border-top: 5px solid $secondaryColour;
+  border-bottom: 5px solid $secondaryColour;
+}
+
+a.button {
+  display: inline-block;
+  border: 4px solid $secondaryColour;
+  padding: 4px 10px;
+  text-align: center;
+  font-size: 18px;
+  margin: 5px 10px;
+
+  &:hover {
+    background: $secondaryColour;
+    color: white;
+  }
+}
+
+.social {
+
+  margin-top: 20px;
+
+  a.button {
+    margin: 5px 2px;
+  }
+}
+
+
+
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primaryColor: #0597FB;
+$secondaryColour: #00E5B3;
+$bgColour: #FDF6E9;
+
+.jobslist {
+  clear: both;
+}
+
+.single_job {
+  margin-bottom: 20px;
+  img {
+    width: 60px;
+    margin-top: 3px;
+    float: left;
+  }
+}
+
+.job_show {
+
+  margin-top: 40px;
+
+  .company_logo {
+    margin: 0 auto 20px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  h3 {
+    margin-top: 23px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
+    letter-spacing: 0.045em;
+    text-transform: capitalize;
+  }
+
+  blockquote {
+    border-top: 5px solid $secondaryColour;
+    border-bottom: 5px solid $secondaryColour;
+    padding: 40px 66px; 
+    font-size: 20px;
+    line-height: 1.3em;
+    letter-spacing: 0.03em;
+    margin: 20px 0 40px;
+
+    background-image: url(/assets/quote-left.png), url(/assets/quote-right.png);
+    background-position: 0 20%, 100% 80%;
+    background-repeat: no-repeat;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  ul {
+    margin: 20px 0;
+  }
+
+  li {
+    background: url(/assets/bullet.png) 0 8px no-repeat;
+    padding-left: 30px;
+  }
+
+}
+
+
+.job_details {
+  float: left;
+  padding-left: 65px;
+  padding-right: 20px;
+  width: 335px;
+}
+
+.featured {
+  background: url(/assets/star.png) 20px 20px no-repeat;
+}
+
+.job_actions {
+  float: left;
+  width: 255px;
+}
+
+.is_featured {
+  background: url(/assets/star.png) no-repeat 20px center;
+}
+
+
+.input.text {
+  label {
+    border-right: 4px solid #00E5B3;
+    border-bottom: none;
+
+    width: 35%;
+  }
+  input,
+  textarea {
+    clear: both;
+    width: 100%;
+    border: 4px solid $secondaryColour;
+  }
+}
+
+.right-fields {
+  float: right;
+  width: 55%;
+  label {
+    white-space: nowrap;
+  }
+}
+
+
+.submission {
+  clear: both;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  p {
+    margin: 20px 0;
+  }
+
+}
+
+
+.new_submission {
+  textarea {
+    clear: both;
+    width: 100%;
+  }
+  cursor: pointer;
+}
+
+.cover_letter {
+  min-height: 100px;
+}
+
+
+.login_form input {
+  margin-bottom: 20px;
+}
+
+.login_form .button {
+  padding-left: 20px;
+  padding-right: 20px;
+}
