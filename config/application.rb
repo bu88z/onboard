@@ -21,3 +21,5 @@ module Onboard
     # config.i18n.default_locale = :de
   end
 end
+
+Rails.application.routes.default_url_options[:host] = 'onboard.com'
