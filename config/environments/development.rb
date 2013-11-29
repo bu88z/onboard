@@ -1,3 +1,7 @@
+Stripe.api_key = "sk_test_6XenBMG3Ntr8j5ljNWuc4ZiL"
+STRIPE_PUBLIC_KEY = "pk_test_R8Kfj6G6IprbkNfNHZv0S61T" # constant, like a symbol
+
+
 Onboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

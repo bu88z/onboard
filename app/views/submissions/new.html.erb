@@ -1,0 +1,14 @@
+<div class="six columns offset-by-three">
+
+	<h2>Apply for job at <%= @job.company_name %></h2>
+
+	<%= simple_form_for [@job, @submission] do |f| %>
+
+		<%= f.input :cover_letter, input_html: { rows: 12 } %> <!-- make the box larger -->
+
+		<%= f.button :submit, "Apply" %>
+
+	<% end %>
+
+
+</div>

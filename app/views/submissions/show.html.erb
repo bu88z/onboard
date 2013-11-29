@@ -1,0 +1,13 @@
+<div class="six columns offset-by-three">
+
+	<h3><%= @submission.user.name %></h3>
+
+	<div class="bordered submission">
+		<%= md @submission.cover_letter %>
+	</div>
+
+</div>
+
+<div class="six columns offset-by-three mid">
+	<%= link_to "Back to job page", job_path(@job), class: "button" %>
+</div>

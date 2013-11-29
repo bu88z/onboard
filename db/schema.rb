@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131129101110) do
+ActiveRecord::Schema.define(version: 20131129124110) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20131129101110) do
     t.string   "application_deadline"
     t.integer  "user_id"
     t.string   "stripe_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "submissions", force: true do |t|
+    t.text     "cover_letter"
+    t.integer  "user_id"
+    t.integer  "job_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

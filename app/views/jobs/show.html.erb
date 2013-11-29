@@ -24,20 +24,42 @@
 
 	<div class="row">
 		<div class="ten columns offset-by-one">
+
 			<div class="map" data-lat="<%= @job.latitute %>" data-long="<%= @job.longitude %>"></div> 
 		</div>
 	</div>
 
 	<div class="row mid">
-		<a href="#" class="button">Apply</a>
+	
+		<%= link_to "Apply", new_job_submission_path(@job), class: "button" %>
 
 		<% if current_user.present? and current_user == @job.user %>
+
+			<%= link_to "Feature this job", new_job_payment_path(@job), class: "button" %>
+
 			<%= link_to "Edit", edit_job_path(@job), class: "button" %>
 
 			<%= link_to "Delete", job_path(@job), method: :delete, class: "button", confirm: "Are you sure?" %>
 		<% end %>
 
 	</div>
+
+	<% if current_user.present? and current_user == @job.user %> 
+	<!-- if we're the current user and have posted that job -->
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3>Submissions for this job</h3>
+
+				<ul>
+					<% @job.submissions.each do |s| %> <!-- multiple submissions per job -->
+						<li>
+							<%= link_to s.user.name, job_submission_path(@job, s) %>
+						</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	<% end %>
 
 
 

@@ -64,3 +64,6 @@ gem "omniauth-linkedin"
 
 # add it markdown
 gem "rdiscount"
+
+#for payments
+gem "stripe"
