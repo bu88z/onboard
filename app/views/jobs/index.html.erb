@@ -9,7 +9,7 @@
 
             <%# image_tag job.company_logo.url, class: "company_logo" %>
 
-            <div class="job_details">
+            <div class="job_details <% if job.stripe_token.present? %> featured<% end %>">
               <h3><%= job.title %> </h3>
               <p><%= job.company_name %><br> <%= job.location %></p>
             </div>

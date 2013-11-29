@@ -1,0 +1,10 @@
+Hiya!
+
+You have a new submission from <%= @submission.user.name %>
+
+You can view their cover letter at:
+
+<%= job_submission_url(@submission.job, @submission) %> <!-- needs the long url -->
+
+Thanks!
+The Onboard team

@@ -22,6 +22,10 @@ class SubmissionsController < ApplicationController
   	if @submission.save
   		flash[:success] = "You've applied for this job"
   		# <div class="flash success" ... (in views layouts application.html.erb)
+
+  		# send out an email
+  		SubmissionsMailer.new(@submission).deliver
+
   		redirect_to job_path(@job)
   	else
   		render :new
