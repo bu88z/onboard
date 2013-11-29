@@ -22,7 +22,7 @@
       <% if current_user.present? %>
          
           <%= link_to current_user.name, "#" %>
-          <%= link_to "Add a job", "#" %>
+          <%= link_to "Add a job", new_job_path %>
           <%= link_to "Account", "#" %>
           <%= link_to "Log out", session_path, method: :delete %>
        

@@ -1,2 +1,48 @@
-<h1>Jobs#index</h1>
-<p>Find me in app/views/jobs/index.html.erb</p>
+<section class="nine columns bordered">
+
+
+    <div class="jobslist">
+      <% @jobs.each do |job| %>
+        <div class="single_job group">
+
+          <%= link_to job_path(job) do %>
+
+            <%# image_tag job.company_logo.url, class: "company_logo" %>
+
+            <div class="job_details">
+              <h3><%= job.title %> </h3>
+              <p><%= job.company_name %><br> <%= job.location %></p>
+            </div>
+
+            <div class="job_actions">
+              <p>Salary: <%= job.salary %></p>
+              <p>Added <%= job.created_at.to_date.to_formatted_s(:long) %></p>
+              <p>Submit by <%= job.application_deadline %></p>
+            </div>
+          <% end %>
+
+
+        </div>
+      <% end %>
+
+    </div>
+</section>
+
+<aside class="three columns bordered">
+  <%= form_tag root_path, method: :get, class: "search_form" do |f| %>
+    <%= text_field_tag :location, params[:location], { placeholder: "Location", class: "location_search" } %>
+   <% end %>
+
+  <h3>Category</h3>
+    <ul>
+    CATEGORY
+    </ul>
+
+  <h3>Job type</h3>
+    <ul>
+
+    JOB TYPE
+    </ul>
+
+
+</aside>

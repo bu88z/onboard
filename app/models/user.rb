@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+	
+	has_many :jobs
+
 	# added some validations
 	validates :name, presence: true, unless: :has_social_login?
 	validates :username, presence: true, uniqueness: true, unless: :has_social_login?

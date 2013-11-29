@@ -1,2 +1,44 @@
-<h1>Jobs#show</h1>
-<p>Find me in app/views/jobs/show.html.erb</p>
+<div class="job_show">
+
+	<div class="row">
+		<div class="four columns offset-by-four">
+			<h3><%= @job.title %></h3>
+			<h4><%= @job.company_name %></h4>
+			<h4><%= @job.location %></h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="eight columns offset-by-two">
+			<blockquote><%= @job.company_tagline %></blockquote>
+
+			<%= md @job.description %> <!-- using the helper (only for views) -->
+
+			<p>
+				Salary: <%= @job.salary %><br />
+				Website: <%= @job.company_url %><br />
+				Application deadline: <%= @job.application_deadline %>
+			</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="ten columns offset-by-one">
+			<div class="map" data-lat="<%= @job.latitute %>" data-long="<%= @job.longitude %>"></div> 
+		</div>
+	</div>
+
+	<div class="row mid">
+		<a href="#" class="button">Apply</a>
+
+		<% if current_user.present? and current_user == @job.user %>
+			<%= link_to "Edit", edit_job_path(@job), class: "button" %>
+
+			<%= link_to "Delete", job_path(@job), method: :delete, class: "button", confirm: "Are you sure?" %>
+		<% end %>
+
+	</div>
+
+
+
+</div>

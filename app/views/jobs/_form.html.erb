@@ -1,0 +1,17 @@
+<%= simple_form_for @job do |f| %>
+
+	<%= f.input :title %>
+	<%= f.input :description %>
+	
+	<%= f.input :company_name %>
+	<%= f.input :company_url, label: "Company website" %>
+	<%= f.input :company_tagline %>
+
+	<%= f.input :location %>
+	<%= f.input :phone, as: :string %> <!-- would be input type tel, it tries to be clever, changes type of cell -->
+	<%= f.input :application_deadline %>
+	<%= f.input :salary %>
+
+	<%= f.button :submit %>
+
+<% end %>
